@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chi tiết xe</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <script>
+    const cars = {
+      fortuner: {
+        name: "Toyota Fortuner 2023",
+        image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6f7e2806-4285-496d-a60f-19113e96c9d6.png",
+        seats: "7 chỗ",
+        fuel: "Xăng",
+        price: "1.200.000đ/ngày",
+        engine: "2.7L 4 xi-lanh, 164 mã lực",
+        transmission: "Số tự động 6 cấp",
+        color: "Trắng, Đen, Bạc",
+        dimensions: {
+          length: "4795 mm",
+          width: "1855 mm",
+          height: "1835 mm",
+          wheelbase: "2745 mm",
+          curbWeight: "1930 kg",
+        },
+        performance: {
+          maxSpeed: "180 km/h",
+          fuelConsumption: "7.7 L/100km",
+          acceleration: "0-100 km/h trong 12 giây",
+        },
+        features: [
+          "Hệ thống phanh ABS, EBD",
+          "Cân bằng điện tử (VSC)",
+          "Hệ thống hỗ trợ khởi hành ngang dốc (HAC)",
+          "Điều hòa tự động 2 vùng",
+          "Màn hình cảm ứng 8 inch",
+          "Hệ thống âm thanh 6 loa",
+          "Camera lùi và cảm biến hỗ trợ đỗ xe",
+        ],
+        description:
+          "Toyota Fortuner 2023 là SUV 7 chỗ mạnh mẽ, thiết kế sang trọng, động cơ tiết kiệm nhiên liệu, phù hợp cho gia đình và du lịch đường dài.",
+      },
+      everest: {
+        name: "Ford Everest 2022",
+        image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/261987b0-8900-4fa0-b405-c61aec8c1dda.png",
+        seats: "7 chỗ",
+        fuel: "Diesel",
+        price: "1.100.000đ/ngày",
+        engine: "2.0L Bi-Turbo, 210 mã lực",
+        transmission: "Số tự động 10 cấp",
+        color: "Xám, Đen, Trắng",
+        dimensions: {
+          length: "4892 mm",
+          width: "1860 mm",
+          height: "1837 mm",
+          wheelbase: "2850 mm",
+          curbWeight: "2100 kg",
+        },
+        performance: {
+          maxSpeed: "190 km/h",
+          fuelConsumption: "7.9 L/100km",
+          acceleration: "0-100 km/h trong 11 giây",
+        },
+        features: [
+          "Hệ thống phanh ABS, EBD, BA",
+          "Hỗ trợ đổ đèo (HDC)",
+          "Điều hòa tự động 2 vùng",
+          "Màn hình cảm ứng 8 inch SYNC 3",
+          "Hệ thống âm thanh 10 loa",
+          "Cảm biến đỗ xe trước/sau, camera 360 độ",
+          "Cảnh báo điểm mù và va chạm",
+        ],
+        description:
+          "Ford Everest 2022 sở hữu khả năng vận hành mạnh mẽ, hệ thống an toàn tiên tiến, không gian rộng rãi cho mọi hành trình.",
+      },
+      sprinter: {
+        name: "Mercedes Sprinter 2021",
+        image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42169ac7-76b8-4e34-9499-0dac5b59d86a.png",
+        seats: "16 chỗ",
+        fuel: "Diesel",
+        price: "1.800.000đ/ngày",
+        engine: "2.1L 4 xi-lanh, 163 mã lực",
+        transmission: "Số tự động 7 cấp",
+        color: "Trắng, Bạc",
+        dimensions: {
+          length: "5935 mm",
+          width: "1993 mm",
+          height: "2540 mm",
+          wheelbase: "3670 mm",
+          curbWeight: "3500 kg",
+        },
+        performance: {
+          maxSpeed: "160 km/h",
+          fuelConsumption: "10.5 L/100km",
+          acceleration: "N/A",
+        },
+        features: [
+          "Hệ thống điều hòa không khí mạnh mẽ",
+          "Ghế ngả có bệ đỡ chân",
+          "Hệ thống âm thanh cao cấp",
+          "Hệ thống camera toàn cảnh",
+          "Hệ thống an toàn đa điểm",
+          "Cửa trượt tự động",
+        ],
+        description:
+          "Mercedes Sprinter 2021 là dòng xe minibus cao cấp, khoang hành khách rộng, tiện nghi hiện đại, phù hợp đoàn du lịch hoặc công tác.",
+      },
+      vios: {
+        name: "Toyota Vios 2022",
+        image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/466f76c0-cb2a-463f-9f2a-e6eb0a95a147.png",
+        seats: "5 chỗ",
+        fuel: "Xăng",
+        price: "800.000đ/ngày",
+        engine: "1.5L 4 xi-lanh, 107 mã lực",
+        transmission: "Số tự động CVT",
+        color: "Đỏ, Trắng, Đen",
+        dimensions: {
+          length: "4425 mm",
+          width: "1730 mm",
+          height: "1475 mm",
+          wheelbase: "2550 mm",
+          curbWeight: "1100 kg",
+        },
+        performance: {
+          maxSpeed: "180 km/h",
+          fuelConsumption: "6.1 L/100km",
+          acceleration: "0-100 km/h trong 12 giây",
+        },
+        features: [
+          "Hệ thống phanh ABS, EBD",
+          "Điều hòa tự động",
+          "Màn hình giải trí 7 inch",
+          "Kết nối Bluetooth, USB",
+          "Hệ thống an toàn chủ động",
+          "Camera lùi",
+        ],
+        description:
+          "Toyota Vios 2022 là sedan cỡ nhỏ tiết kiệm nhiên liệu, vận hành êm ái, thiết kế thời trang, phù hợp di chuyển nội thành.",
+      },
+      xe32cho: {
+        name: "Xe khách 32 chỗ 2023",
+        image: "img/anh32.jpg",
+        seats: "32 chỗ",
+        fuel: "Diesel",
+        price: "3.000.000đ/ngày",
+        engine: "5.2L 6 xi-lanh, 180 mã lực",
+        transmission: "Số sàn 6 cấp",
+        color: "Trắng, Xanh",
+        dimensions: {
+          length: "9000 mm",
+          width: "2500 mm",
+          height: "3200 mm",
+          wheelbase: "4500 mm",
+          curbWeight: "8000 kg",
+        },
+        performance: {
+          maxSpeed: "120 km/h",
+          fuelConsumption: "15 L/100km",
+          acceleration: "N/A",
+        },
+        features: [
+          "Máy lạnh công suất lớn",
+          "Ghế ngả, bọc da cao cấp",
+          "Hệ thống âm thanh đa vùng",
+          "Camera hành trình",
+          "Hệ thống cứu hộ khẩn cấp",
+          "Cửa tự động, cửa thoát hiểm",
+        ],
+        description:
+          "Xe khách 32 chỗ 2023 rộng rãi, tiện nghi, máy lạnh, ghế ngả, phù hợp cho các tour du lịch hoặc đoàn tham quan đông người.",
+      },
+    };
+
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const carId = urlParams.get("xe");
+      const car = cars[carId];
+
+      if (car) {
+        document.getElementById("carName").textContent = car.name;
+        document.getElementById("carImage").src = car.image;
+        document.getElementById("carSeats").textContent = car.seats;
+        document.getElementById("carFuel").textContent = car.fuel;
+        document.getElementById("carPrice").textContent = car.price;
+        document.getElementById("carEngine").textContent = car.engine;
+        document.getElementById("carTransmission").textContent = car.transmission;
+        document.getElementById("carColor").textContent = car.color;
+
+        // Kích thước
+        document.getElementById("dimLength").textContent = car.dimensions.length;
+        document.getElementById("dimWidth").textContent = car.dimensions.width;
+        document.getElementById("dimHeight").textContent = car.dimensions.height;
+        document.getElementById("dimWheelbase").textContent = car.dimensions.wheelbase;
+        document.getElementById("dimWeight").textContent = car.dimensions.curbWeight;
+
+        // Hiệu năng
+        document.getElementById("perfMaxSpeed").textContent = car.performance.maxSpeed;
+        document.getElementById("perfFuelCons").textContent = car.performance.fuelConsumption;
+        document.getElementById("perfAcceleration").textContent = car.performance.acceleration;
+
+        // Tính năng
+        const featuresList = document.getElementById("featuresList");
+        featuresList.innerHTML = "";
+        car.features.forEach((feat) => {
+          const li = document.createElement("li");
+          li.textContent = feat;
+          li.classList.add("mb-1", "before:content-['•']", "before:text-blue-600", "before:mr-2");
+          featuresList.appendChild(li);
+        });
+
+        document.getElementById("carDescription").textContent = car.description;
+      } else {
+        document.body.innerHTML =
+          "<h2 class='text-center mt-20 text-red-600 text-xl font-semibold'>Không tìm thấy thông tin xe</h2>";
+      }
+    };
+  </script>
+  <style>
+    /* Thêm CSS để điều chỉnh hình ảnh */
+    #carImage {
+      object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+      height: 300px; /* Đặt chiều cao cố định cho hình ảnh */
+    }
+    /* Giảm khoảng cách dưới hình ảnh */
+    .max-w-md {
+      margin-bottom: 0; /* Xóa khoảng cách dưới hình ảnh */
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-blue-50 to-white min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-7xl bg-white rounded-xl shadow-xl p-10 flex flex-col md:flex-row gap-10">
+    <!-- Ảnh xe -->
+    <div class="md:w-1/2 max-w-md mx-auto rounded-lg overflow-hidden shadow-md border border-gray-200">
+      <img
+        id="carImage"
+        src=""
+        alt="Hình ảnh xe"
+        class="w-full h-full object-cover rounded-lg shadow-md"
+      />
+    </div>
+
+    <!-- Thông tin chi tiết -->
+    <div class="md:w-1/2 flex flex-col justify-between">
+      <h1
+        id="carName"
+        class="text-4xl font-extrabold text-blue-900 mb-6 border-b-4 border-blue-600 pb-2"
+      ></h1>
+
+      <div class="grid grid-cols-2 gap-x-8 gap-y-4 text-gray-800 text-lg mb-6">
+        <p><i class="fa-solid fa-users mr-3 text-blue-600"></i><strong>Số chỗ:</strong> <span id="carSeats"></span></p>
+        <p><i class="fa-solid fa-gas-pump mr-3 text-blue-600"></i><strong>Nhiên liệu:</strong> <span id="carFuel"></span></p>
+        <p><i class="fa-solid fa-money-bill-wave mr-3 text-blue-600"></i><strong>Giá thuê:</strong> <span id="carPrice"></span></p>
+        <p><i class="fa-solid fa-engine-warning mr-3 text-blue-600"></i><strong>Động cơ:</strong> <span id="carEngine"></span></p>
+        <p><i class="fa-solid fa-cogs mr-3 text-blue-600"></i><strong>Hộp số:</strong> <span id="carTransmission"></span></p>
+        <p><i class="fa-solid fa-palette mr-3 text-blue-600"></i><strong>Màu sắc:</strong> <span id="carColor"></span></p>
+      </div>
+
+      <!-- Bảng thông số kỹ thuật -->
+      <h2 class="text-2xl font-semibold text-blue-800 mb-3 border-b border-blue-400 pb-2">Thông số kỹ thuật</h2>
+      <table class="table-auto w-full text-left mb-6 text-gray-700">
+        <tbody>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Chiều dài</th>
+            <td id="dimLength" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Chiều rộng</th>
+            <td id="dimWidth" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Chiều cao</th>
+            <td id="dimHeight" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Chiều dài cơ sở</th>
+            <td id="dimWheelbase" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Trọng lượng không tải</th>
+            <td id="dimWeight" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Tốc độ tối đa</th>
+            <td id="perfMaxSpeed" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Tiêu hao nhiên liệu</th>
+            <td id="perfFuelCons" class="py-2"></td>
+          </tr>
+          <tr class="border-b">
+            <th class="py-2 pr-6 font-medium">Gia tốc 0-100 km/h</th>
+            <td id="perfAcceleration" class="py-2"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Tính năng & tiện nghi -->
+      <h2 class="text-2xl font-semibold text-blue-800 mb-3 border-b border-blue-400 pb-2">Tiện nghi & Tính năng nổi bật</h2>
+      <ul id="featuresList" class="list-disc list-inside mb-6 text-gray-700"></ul>
+
+      <div class="border-t border-gray-300 pt-6">
+        <h2 class="text-2xl font-semibold mb-3 text-blue-800">Mô tả chi tiết</h2>
+        <p id="carDescription" class="text-lg leading-relaxed text-justify text-gray-800"></p>
+      </div>
+
+      <button
+        onclick="history.back()"
+        class="mt-8 self-start bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-7 rounded-lg shadow-md transition duration-300"
+      >
+        <i class="fa-solid fa-arrow-left mr-2"></i> Quay lại
+      </button>
+    </div>
+  </div>
+</body>
+</html>

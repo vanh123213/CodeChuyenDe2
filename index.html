@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thuê Xe Du Lịch | AHK Car Rental</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/anhbg2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .quick-msg {
+              background: #f1f5f9;
+             border: 1px solid #cbd5e1;
+             border-radius: 16px;
+             padding: 5px 10px;
+             font-size: 13px;
+             margin: 3px 0;
+             cursor: pointer;
+             width: 100%;
+             text-align: left;
+        }
+
+         .quick-msg:hover {
+             background: #e0e7ff;
+        }
+
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/anhlogo.jpg" alt="Logo công ty thuê xe Saigon Car Rental" class="h-10">
+                <span class="ml-2 text-xl font-bold text-blue-600">AHK Car Rental</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-800 hover:text-blue-600">Trang chủ</a>
+                <a href="#services" class="text-gray-800 hover:text-blue-600">Dịch vụ</a>
+                <a href="#fleet" class="text-gray-800 hover:text-blue-600">Danh sách xe</a>
+                <a href="#about" class="text-gray-800 hover:text-blue-600">Giới thiệu</a>
+                <a href="#contact" class="text-gray-800 hover:text-blue-600">Liên hệ</a>
+                <a href="login.php" class="text-gray-800 hover:text-blue-600">Đăng nhập</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl text-gray-800"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-center text-white">
+        <div class="container px-6 mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Thuê Xe Du Lịch Chất Lượng Cao</h1>
+            <p class="text-xl md:text-2xl mb-8"></p>
+            <a href="#booking" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Đặt Xe Ngay</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Dịch Vụ Của Chúng Tôi</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-car text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Thuê Xe Tự Lái</h3>
+                    <p class="text-gray-600">Chúng tôi cung cấp đa dạng các dòng xe từ 4 chỗ nhỏ gọn, phù hợp cho các cặp đôi hoặc gia đình ít thành viên, đến 7 chỗ rộng rãi cho những chuyến đi gia đình đông người, và cả xe 16 chỗ tiện nghi dành cho nhóm bạn hoặc đoàn khách lớn. Mỗi chiếc xe đều được bảo dưỡng định kỳ, đảm bảo động cơ vận hành êm ái, trang bị đầy đủ tiện nghi như điều hòa, ghế ngồi êm ái, hệ thống giải trí… giúp khách hàng tận hưởng sự thoải mái và chủ động trong suốt hành trình.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-user-tie text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Thuê Xe Có Tài Xế</h3>
+                    <p class="text-gray-600">Dịch vụ thuê xe có tài xế mang đến cho khách hàng sự an tâm tuyệt đối với đội ngũ tài xế giàu kinh nghiệm, thông thạo đường phố và am hiểu các điểm du lịch nổi tiếng trên khắp Việt Nam. Không chỉ đảm bảo an toàn trong suốt chuyến đi, các tài xế còn có thể gợi ý lộ trình hợp lý, chia sẻ những địa điểm ăn uống, vui chơi thú vị, giúp chuyến đi của bạn trở nên dễ dàng và trọn vẹn hơn.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-map-marked-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Tour Du Lịch Trọn Gói</h3>
+                    <p class="text-gray-600">Chúng tôi mang đến các gói tour du lịch kết hợp tiện lợi gồm xe đưa đón, khách sạn lưu trú và các điểm tham quan hấp dẫn, tất cả được sắp xếp một cách khoa học và tối ưu chi phí. Du khách chỉ cần lựa chọn điểm đến yêu thích, chúng tôi sẽ lo toàn bộ các khâu chuẩn bị, đảm bảo bạn có một kỳ nghỉ thoải mái, tiết kiệm thời gian, chi phí và tận hưởng trọn vẹn từng khoảnh khắc trong chuyến đi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Danh Sách Xe</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Car 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md car-card transition duration-300">
+                    <div class="car-image h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6f7e2806-4285-496d-a60f-19113e96c9d6.png" alt="Toyota Fortuner màu trắng, SUV 7 chỗ đời mới" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <a href="chitiet.html?xe=fortuner" class="text-xl font-semibold mb-2 text-blue-700 hover:underline block">Toyota Fortuner 2023</a>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-600"><i class="fas fa-users mr-2"></i> 7 chỗ</span>
+                            <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i> Xăng</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">1.200.000đ/ngày</span>
+                            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">
+                                 Đặt Xe
+                            </button>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Car 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md car-card transition duration-300">
+                    <div class="car-image h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/261987b0-8900-4fa0-b405-c61aec8c1dda.png" alt="Ford Everest màu đen, SUV cao cấp 7 chỗ" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <a href="chitiet.html?xe=everest" class="text-xl font-semibold mb-2 text-blue-700 hover:underline block">Ford Everest 2022</a>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-600"><i class="fas fa-users mr-2"></i> 7 chỗ</span>
+                            <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i> Dầu</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">1.300.000đ/ngày</span>
+                            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">
+                                 Đặt Xe
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Car 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md car-card transition duration-300">
+                    <div class="car-image h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/42169ac7-76b8-4e34-9499-0dac5b59d86a.png" alt="Mercedes-Benz Sprinter màu trắng, xe 16 chỗ sang trọng" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <a href="chitiet.html?xe=sprinter" class="text-xl font-semibold mb-2 text-blue-700 hover:underline block">Mercedes Sprinter 2021</a>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-600"><i class="fas fa-users mr-2"></i> 16 chỗ</span>
+                            <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i> Dầu</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">2.500.000đ/ngày</span>
+                            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });"
+                                     class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">
+                                 Đặt Xe
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Car 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md car-card transition duration-300">
+                    <div class="car-image h-48 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/466f76c0-cb2a-463f-9f2a-e6eb0a95a147.png" alt="Toyota Vios màu bạc, xe sedan 4 chỗ tiết kiệm nhiên liệu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <a href="chitiet.html?xe=vios" class="text-xl font-semibold mb-2 text-blue-700 hover:underline block">Toyota Vios 2022</a>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-600"><i class="fas fa-users mr-2"></i> 4 chỗ</span>
+                            <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i> Xăng</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">700.000đ/ngày</span>
+                            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">
+                                 Đặt Xe
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Car 5 - 32 seater -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md car-card transition duration-300">
+                    <div class="car-image h-48 overflow-hidden">
+                        <img src="img/anh32.jpg" alt="Xe khách 32 chỗ cao cấp" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <a href="chitiet.html?xe=xe32cho" class="text-xl font-semibold mb-2 text-blue-700 hover:underline block">Xe Khách 32 Chỗ 2023</a>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-gray-600"><i class="fas fa-users mr-2"></i> 32 chỗ</span>
+                            <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i> Dầu</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-blue-600 font-bold">4.500.000đ/ngày</span>
+                            <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });"
+                                      class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded text-sm">
+                                 Đặt Xe
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+<section id="booking" class="py-16 bg-blue-600 text-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-12">Đặt Xe Ngay Hôm Nay</h2>
+        <form action="process_booking.php" method="POST" class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label for="name" class="block mb-2">Họ và tên</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div>
+                <label for="phone" class="block mb-2">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded" placeholder="0901234567" required>
+            </div>
+            <div>
+                <label for="car-type" class="block mb-2">Loại xe</label>
+                <select id="car-type" name="car-type" class="w-full px-4 py-2 rounded" required>
+                    <option value="">Chọn loại xe</option>
+                    <option value="Sedan (4 chỗ)">Sedan (4 chỗ)</option>
+                    <option value="SUV (7 chỗ)">SUV (7 chỗ)</option>
+                    <option value="Minivan (16 chỗ)">Minivan (16 chỗ)</option>
+                    <option value="Xe khách (32 chỗ)">Xe khách (32 chỗ)</option>
+                    <option value="Xe cao cấp">Xe cao cấp</option>
+                </select>
+            </div>
+            <div>
+                <label for="rental-type" class="block mb-2">Hình thức thuê</label>
+                <select id="rental-type" name="rental-type" class="w-full px-4 py-2 rounded" required>
+                    <option value="">Chọn hình thức</option>
+                    <option value="Tự Lái">Tự lái</option>
+                    <option value="Có tài xế">Có tài xế</option>
+                    <option value="Tour du lịch trọn gói">Tour du lịch trọn gói</option>
+                </select>
+            </div>
+            <div>
+                <label for="pickup-date" class="block mb-2">Ngày nhận xe</label>
+                <input type="date" id="pickup-date" name="pickup-date" class="w-full px-4 py-2 rounded" required>
+            </div>
+            <div>
+                <label for="return-date" class="block mb-2">Ngày trả xe</label>
+                <input type="date" id="return-date" name="return-date" class="w-full px-4 py-2 rounded" required>
+            </div>
+            <div class="md:col-span-2">
+                <label for="note" class="block mb-2">Ghi chú thêm</label>
+                <textarea id="note" name="note" rows="3" class="w-full px-4 py-2 rounded" placeholder="Yêu cầu đặc biệt về xe, điểm đón, v.v..."></textarea>
+            </div>
+            <div class="md:col-span-2 text-center">
+                <button type="submit" class="bg-white hover:bg-gray-100 text-blue-600 font-bold py-3 px-8 rounded-lg text-lg transition duration-300">Gửi Yêu Cầu</button>
+            </div>
+        </form>
+    </div>
+</section>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Về AHK Car Rental</h2>
+                    <p class="text-gray-600 mb-4">Với hơn một thập kỷ không ngừng phát triển và hoàn thiện, AHK Car Rental đã khẳng định vị thế vững chắc là thương hiệu hàng đầu trong lĩnh vực cho thuê xe du lịch tại TP. Hà Nội và khu vực lân cận. Chúng tôi không chỉ đơn thuần là một đơn vị cung cấp phương tiện, mà còn là đối tác tin cậy đồng hành cùng quý khách trên mọi hành trình, từ những chuyến đi công tác quan trọng, chuyến du lịch gia đình ấm cúng, cho đến các sự kiện trọng đại như đám cưới, lễ hội hay các dịp kỷ niệm đặc biệt.Đội xe của AHK Car Rental được đầu tư kỹ lưỡng với đa dạng các dòng xe sang trọng và hiện đại, từ những chiếc sedan cao cấp dành cho cá nhân và doanh nhân, đến các dòng xe 7 chỗ, 16 chỗ và cả xe khách 32 chỗ rộng rãi, thoải mái, đáp ứng mọi nhu cầu di chuyển của khách hàng. Mỗi chiếc xe đều được bảo dưỡng định kỳ nghiêm ngặt, đảm bảo luôn trong trạng thái vận hành tối ưu, mang đến trải nghiệm lái mượt mà và an toàn tuyệt đối.Chúng tôi tự hào sở hữu đội ngũ tài xế chuyên nghiệp, được đào tạo bài bản với thái độ phục vụ tận tâm, lịch sự và am hiểu sâu sắc về cung đường. Tài xế của AHK Car Rental luôn coi trọng sự an toàn và sự hài lòng của khách hàng lên hàng đầu, đồng thời luôn sẵn sàng hỗ trợ và đáp ứng các yêu cầu đặc biệt nhằm mang đến sự tiện nghi và thoải mái tối đa trong suốt hành trình.Bên cạnh chất lượng dịch vụ vượt trội, AHK Car Rental cam kết minh bạch về giá cả với các gói dịch vụ linh hoạt, cạnh tranh và nhiều chương trình ưu đãi hấp dẫn dành cho khách hàng thân thiết và các đối tác doanh nghiệp. Chúng tôi không ngừng nâng cao giá trị dịch vụ bằng việc tích hợp công nghệ đặt xe trực tuyến hiện đại, hỗ trợ tư vấn 24/7 nhằm giúp quý khách dễ dàng lựa chọn phương án phù hợp nhất chỉ với vài thao tác đơn giản.Tại AHK Car Rental, chúng tôi hiểu rằng mỗi chuyến đi không chỉ là hành trình từ điểm A đến điểm B, mà còn là trải nghiệm và kỷ niệm đáng trân trọng. Vì vậy, chúng tôi luôn nỗ lực không ngừng để mang đến dịch vụ cho thuê xe hoàn hảo, an toàn và sang trọng nhất, xứng đáng với sự tin tưởng và lựa chọn của quý khách hàng.Hãy để AHK Car Rental trở thành người bạn đồng hành đáng tin cậy, nâng tầm mọi chuyến đi của bạn..</p>
+                    
+                    
+                </div>
+                <div>
+                    <img src="img/anhgt.jpg" alt="Đội ngũ AHK Car Rental" class="w-full rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Khách Hàng Nói Về Chúng Tôi</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2cff7c40-76bc-43f8-a5a9-908a39426796.png" alt="Chân dung khách hàng Trần Thị B" class="h-12 w-12 rounded-full">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Trần Thị B</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Xe rất mới và sạch sẽ, nhân viên nhiệt tình. Đã thuê nhiều lần và rất hài lòng về chất lượng dịch vụ."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ddccc3b9-1a29-4f13-b70d-8ade679bd552.png" alt="Chân dung khách hàng Lê Văn C" class="h-12 w-12 rounded-full">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Lê Văn C</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Tài xế rất chuyên nghiệp, thân thiện và am hiểu các điểm du lịch. Sẽ giới thiệu bạn bè sử dụng dịch vụ."</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74b653b9-1b29-459e-9256-a28416903280.png" alt="Chân dung khách hàng Phạm Thị D" class="h-12 w-12 rounded-full">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Phạm Thị D</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Giá cả hợp lý, thủ tục nhanh gọn. Xe chạy êm và tiết kiệm nhiên liệu. Rất đáng để sử dụng lại."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+<section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Liên Hệ Với Chúng Tôi</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Thông tin liên hệ</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                        <p>189 Đường Hoàng Cầu, Phường Trung Liệt, Quận Đống Đa, TP. Hà Nội</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
+                        <p>028 3827 3888</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-mobile-alt text-blue-600 mr-3"></i>
+                        <p>0901 234 567 (24/7)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                        <p>AHK@gmail.com</p>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h4 class="font-semibold mb-3">Kết nối với chúng tôi</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/van.anh.453658/" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://youtu.be/czCCMl7vVSU?si=_W4SiuvEFEEFpLq0" class="text-red-500 hover:text-red-700">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/quokhahs_174?igsh=MW1zMmZmZ3IyZDM5Yg==" class="text-pink-600 hover:text-pink-800">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Gửi tin nhắn</h3>
+                <form action="process_contact.php" method="POST">
+                    <div class="mb-4">
+                        <label for="contact-name" class="block mb-2">Họ và tên</label>
+                        <input type="text" id="contact-name" name="contact-name" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-email" class="block mb-2">Email</label>
+                        <input type="email" id="contact-email" name="contact-email" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-subject" class="block mb-2">Tiêu đề</label>
+                        <input type="text" id="contact-subject" name="contact-subject" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-message" class="block mb-2">Nội dung</label>
+                        <textarea id="contact-message" name="contact-message" rows="4" class="w-full px-4 py-2 rounded border border-gray-300" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Về Chúng Tôi</h4>
+                    <p class="text-gray-400">AHK Car Rental cung cấp dịch vụ thuê xe du lịch chất lượng cao tại TP.Hà Nội và các tỉnh lân cận.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên Kết Nhanh</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trang chủ</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">Giới thiệu</a></li>
+                        <li><a href="#fleet" class="text-gray-400 hover:text-white">Danh sách xe</a></li>
+                        <li><a href="chinh-sach.html?section=privacy" class="text-gray-400 hover:text-white">Chính sách thuê</a></li>
+                        <li><a href="news.html?section=privacy" class="text-gray-400 hover:text-white">Tin tức</a></li>
+                    </ul>
+                </div>
+               <div>
+                    <h4 class="text-lg font-semibold mb-4">Hỗ Trợ</h4>
+                    <ul class="space-y-2">
+                    <li><a href="hotro.html?section=faq" class="text-gray-400 hover:text-white">Câu hỏi thường gặp</a></li>
+                    <li><a href="hotro.html?section=guide" class="text-gray-400 hover:text-white">Hướng dẫn thuê xe</a></li>
+                    <li><a href="hotro.html?section=payment" class="text-gray-400 hover:text-white">Thanh toán</a></li>
+                    <li><a href="hotro.html?section=privacy" class="text-gray-400 hover:text-white">Bảo mật thông tin</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Đăng ký nhận tin</h4>
+                    <p class="text-gray-400 mb-4">Nhận thông tin khuyến mãi và tin tức mới nhất.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email của bạn" class="px-4 py-2 rounded-l text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 AHK Car Rental. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Nút mở chat -->
+<button id="open-chat-btn" style="
+  position: fixed; bottom: 20px; right: 20px;
+  background: #2563eb; color: white; border: none;
+  padding: 14px 18px; border-radius: 50px;
+  cursor: pointer; z-index: 1000;
+">💬 Hỏi nhanh</button>
+
+<!-- Hộp chat -->
+<div id="chat-box" style="
+  position: fixed; bottom: 80px; right: 20px;
+  width: 320px; max-height: 500px;
+  background: white; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: none; flex-direction: column;
+  overflow: hidden; z-index: 1000;
+  font-family: Arial, sans-serif;
+">
+  <!-- Header -->
+  <div style="background: #2563eb; color: white; padding: 12px 16px; display: flex; justify-content: space-between;">
+    <strong>Trợ lý thuê xe</strong>
+    <button id="close-chat-btn" style="background: none; border: none; color: white; font-size: 18px;">×</button>
+  </div>
+
+  <!-- Nội dung chat -->
+  <div id="chat-content" style="padding: 10px; height: 250px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; background: #f9f9f9;">
+    <div class="bot-msg">Xin chào! Bạn cần hỗ trợ gì?</div>
+  </div>
+
+  <!-- Gửi tin -->
+  <div style="border-top: 1px solid #eee; padding: 10px; display: flex; gap: 6px;">
+    <input id="user-input" type="text" placeholder="Nhập tin nhắn..." style="flex: 1; padding: 6px 8px; border-radius: 20px; border: 1px solid #ccc;">
+    <button id="send-btn" style="padding: 6px 12px; background: #2563eb; color: white; border: none; border-radius: 20px; cursor: pointer;">Gửi</button>
+  </div>
+
+  <!-- Câu hỏi nhanh -->
+  <div style="border-top: 1px solid #eee; padding: 10px;">
+    <div style="font-size: 13px; color: gray; margin-bottom: 5px;">💡 Câu hỏi nhanh:</div>
+    <div style="display: flex; flex-direction: column; gap: 5px;">
+      <button class="quick-msg" style="text-align: left; padding: 6px 10px; border: 1px solid #ddd; border-radius: 20px; background: #f0f0f0; cursor: pointer;">Tôi muốn biết giá thuê?</button>
+      <button class="quick-msg" style="text-align: left; padding: 6px 10px; border: 1px solid #ddd; border-radius: 20px; background: #f0f0f0; cursor: pointer;">Tôi muốn đặt xe</button>
+      <button class="quick-msg" style="text-align: left; padding: 6px 10px; border: 1px solid #ddd; border-radius: 20px; background: #f0f0f0; cursor: pointer;">Số điện thoại liên hệ?</button>
+      <button class="quick-msg" style="text-align: left; padding: 6px 10px; border: 1px solid #ddd; border-radius: 20px; background: #f0f0f0; cursor: pointer;">Có những loại xe nào?</button>
+    </div>
+  </div>
+</div>
+
+<!-- Style cho tin nhắn -->
+<style>
+  .user-msg {
+    align-self: flex-end;
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 18px 18px 0 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+
+  .bot-msg {
+    align-self: flex-start;
+    background: #e5e5ea;
+    color: #111;
+    padding: 8px 12px;
+    border-radius: 18px 18px 18px 0;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  const openBtn = document.getElementById('open-chat-btn');
+  const closeBtn = document.getElementById('close-chat-btn');
+  const chatBox = document.getElementById('chat-box');
+  const chatContent = document.getElementById('chat-content');
+  const userInput = document.getElementById('user-input');
+  const sendBtn = document.getElementById('send-btn');
+  const quickMsgs = document.querySelectorAll('.quick-msg');
+
+  openBtn.addEventListener('click', () => {
+    chatBox.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    chatBox.style.display = 'none';
+  });
+
+  function addMessage(text, isUser = false) {
+    const msg = document.createElement('div');
+    msg.className = isUser ? 'user-msg' : 'bot-msg';
+    msg.innerText = text;
+    chatContent.appendChild(msg);
+    chatContent.scrollTop = chatContent.scrollHeight;
+  }
+
+  function getBotReply(userMsg) {
+    const msg = userMsg.toLowerCase();
+    if (msg.includes("giá") || msg.includes("bao nhiêu")) {
+      return "Giá thuê xe tùy loại xe và thời gian. Bạn cần thuê xe gì vậy?";
+    } else if (msg.includes("liên hệ") || msg.includes("số điện thoại")) {
+      return "Bạn có thể gọi trực tiếp tới số: 0909 123 456.";
+    } else if (msg.includes("đặt xe")) {
+      return "Để đặt xe, bạn vui lòng điền thông tin vào phần đặt xe trên website.";
+    } else if (msg.includes("xe nào")) {
+      return "Chúng tôi có nhiều loại xe như 4 chỗ, 7 chỗ, 32 chỗ, Limousine... bạn muốn loại nào?";
+    } else {
+      return "Cảm ơn bạn! Chúng tôi sẽ phản hồi sớm.";
+    }
+  }
+
+  function handleSendMessage(msgText) {
+    if (!msgText) return;
+    addMessage(msgText, true);
+    userInput.value = "";
+    setTimeout(() => {
+      const reply = getBotReply(msgText);
+      addMessage(reply);
+    }, 500);
+  }
+
+  sendBtn.addEventListener('click', () => {
+    handleSendMessage(userInput.value.trim());
+  });
+
+  userInput.addEventListener('keypress', (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSendMessage(userInput.value.trim());
+    }
+  });
+
+  quickMsgs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      handleSendMessage(btn.textContent);
+    });
+  });
+</script>
+ <!-- Nút nổi Zalo và Mess -->
+  <div class="social-fab" aria-label="Liên hệ nhanh" style="position:fixed;left:20px;bottom:160px;display:flex;flex-direction:column;gap:12px;z-index:2147483647;">
+    <a class="fab zalo" href="https://zalo.me/0856716333" target="_blank" rel="noopener" aria-label="Chat Zalo"
+       style="width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#0068ff;box-shadow:0 10px 30px rgba(0,0,0,.22);">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+        <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-6.2L8 22v-5H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="white" opacity=".95"/>
+        <text x="12" y="14" text-anchor="middle" font-size="9" font-family="Arial" font-weight="700" fill="#0068ff">Z</text>
+      </svg>
+    </a>
+
+    <a class="fab fb" href="https://m.me/xedulichAHK" target="_blank" rel="noopener" aria-label="Chat Facebook"
+       style="width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#1877F2;box-shadow:0 10px 30px rgba(0,0,0,.22);">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.04 2 10.99c0 2.75 1.28 5.22 3.37 6.92V22l3.08-1.7c1.01.28 2.08.43 3.19.43 5.52 0 10-4.04 10-8.99S17.52 2 12 2z" fill="white" opacity=".95"/>
+        <path d="M6.5 13l4.1-4.3c.2-.2.52-.23.76-.07l2.19 1.4 3.98-2.73c.39-.27.88.2.62.6l-4.1 4.3a.6.6 0 0 1-.76.07l-2.19-1.4-3.98 2.73c-.39.27-.88-.2-.62-.6z" fill="#1877F2"/>
+      </svg>
+    </a>
+  </div>
+
+</body>
+</html>
+
